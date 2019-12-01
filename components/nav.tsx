@@ -1,11 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 
+type LinkData = {
+  href: string;
+  label: string;
+  key: string;
+}
+
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT' },
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
 ].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
+  (link as any).key = `nav-link-${link.href}-${link.label}`
   return link
 })
 
@@ -17,7 +23,7 @@ const Nav = () => (
           <a>Home</a>
         </Link>
       </li>
-      {links.map(({ key, href, label }) => (
+      {links.map(({ key, href, label }: LinkData) => (
         <li key={key}>
           <a href={href}>{label}</a>
         </li>

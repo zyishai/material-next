@@ -65,10 +65,16 @@ const Home = () => (
         text-align: left;
         text-decoration: none;
         color: #434343;
-        border: 1px solid #9b9b9b;
+        /*border: 1px solid #9b9b9b;*/
+        border: 1px solid #067df7;
+        transition: 0.5s;
       }
       .card:hover {
-        border-color: #067df7;
+        /*border-color: #067df7;*/
+        background-color: #067df7;
+      }
+      .card:hover * {
+        color: #fff !important;
       }
       .card h3 {
         margin: 0;
