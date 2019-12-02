@@ -28,7 +28,7 @@ class MaterialDocument extends Document {
                         content="Nextjs with Material-UI"
                     />
                 </Head>
-                <body>
+                <body dir={theme.direction}>
                     <Main />
                     <NextScript />
                 </body>

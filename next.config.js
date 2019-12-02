@@ -1,6 +1,8 @@
 const withSass = require('@zeit/next-sass');
-const env = require('dotenv').config();
+const { parsed, error } = require('dotenv').config();
+
+if (error) throw error;
 
 module.exports = withSass({
-    env
+    env: parsed
 });
